@@ -1,25 +1,86 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Homepage from './components/Home';
+import Products from './components/Products';
+import Posts from './components/Posts';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/* ÄNDRA SWITCHES TILL RÄTT COMPONENTS EFTER LAGT TILL FLER */
+
+class App extends Component {
+
+  constructor(props) {
+    
+    super(props);
+    this.state = {}
+  }
+  
+  render() {
+
+    return (
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/products">Products</Link>
+              </li>
+              <li>
+                <Link to="/posts">Posts</Link>
+              </li>
+              <li>
+                <Link to="/media">Media</Link>
+              </li>
+              <li>
+                <Link to="/orders">Orders</Link>
+              </li>
+            </ul>
+          </nav>
+  
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/products">
+              <Products />
+            </Route>
+            <Route path="/posts">
+              <Posts />
+            </Route>            
+            <Route path="/media">
+              <Homepage />
+            </Route>
+            <Route path="/orders">
+              <Homepage />
+            </Route>
+            <Route path="/">
+              <Homepage />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+
+  }
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
 
 export default App;
