@@ -49,7 +49,7 @@ class Orders extends Component {
         else {
             return (
                 <body>
-                    <h1>Products</h1>
+                    <h1>Orders</h1>
                     <div className="App">
 
                         <ul>

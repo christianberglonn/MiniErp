@@ -36,7 +36,7 @@ class Posts extends Component {
         else {
             return (
                 <>
-                    <h1>Welcome!</h1>
+                    <h1>Posts</h1>
                     <div className="App">
 
                         <ul>
