@@ -24,6 +24,22 @@
   color: white;
 }
 
+Li {
+  display: inline;
+}
+
+.Ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.center-navbar {
+  width:30%;
+  margin-left: 35%;
+}
+
 .App-link {
   color: #61dafb;
 }

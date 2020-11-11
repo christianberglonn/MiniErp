@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class Products extends Component {
+class Media extends Component {
 
     constructor(props) {
 
@@ -48,33 +48,19 @@ class Products extends Component {
         }
         else {
             return (
-                <body>
-                    <h1>Products</h1>
+                <>
+                    <h1>Media</h1>
                     <div className="App">
+
                         <ul>
                             {items.map(item => (
-                                <>
-                                    <li key={item.id}>
-                                        <img src="{item.images[0].src}" alt="Http/Https problem. Read comment in assignment" />
-                                        <br />
-                                    </li>
-                                    <li key={item.id}>
-                                        Name: {item.name} <br />
-                                    </li>
-                                    <li key={item.id}>
-                                        Category: {item.categories[0].name} <br />
-                                    </li>
-                                    <li key={item.id}>
-                                        Price: {item.price} <br />
-                                    </li>
-                                    <br />
-                                </>
+                                <li key={item.id}>
+                                    <img src="{item.images[0].src}" alt="Http/Https problem. Read comment in assignment" />
+                                </li>
                             ))}
                         </ul>
-
-
                     </div>
-                </body>
+                </>
             );
 
         };
@@ -84,4 +70,4 @@ class Products extends Component {
 }
 
 
-export default Products;
+export default Media;
