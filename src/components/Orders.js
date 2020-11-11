@@ -68,7 +68,7 @@ class Orders extends Component {
                                         <br />
                                     </li>
                                     <li key={item.id}>
-                                        Total Cost: {item.date_created}
+                                        Date: {item.date_created}
                                         <br />
                                     </li>
                                     <br />
