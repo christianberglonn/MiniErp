@@ -12,8 +12,6 @@ import Posts from './components/Posts';
 import Media from './components/Media';
 import Orders from './components/Orders';
 
-/* ÄNDRA SWITCHES TILL RÄTT COMPONENTS EFTER LAGT TILL FLER */
-
 class App extends Component {
 
   constructor(props) {
